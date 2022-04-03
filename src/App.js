@@ -1,25 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import { Route, Routes } from 'react-router-dom'
+import Navbar from './components/navbar'
+import DataFetching from './pages/data-fetching'
+import Home from './pages/home'
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	return (
+		<Routes>
+			<Route path='/' element={<Home />} />
+			<Route
+				path='/examples'
+				element={
+					<div className='min-h-screen overflow-x-hidden bg-slate-50'>
+						<div className='w-[250px] fixed h-full bottom-0 left-0 top-0'>
+							<Navbar />
+						</div>
+						<div className='fixed w-full left-[250px] h-full right-0 top-0 bottom-0'>
+							<Routes>
+								<Route path='data-fetching' element={<DataFetching />} />
+							</Routes>
+						</div>
+					</div>
+				}
+			/>
+		</Routes>
+	)
 }
 
-export default App;
+export default App
