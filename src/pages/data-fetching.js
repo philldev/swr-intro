@@ -1,5 +1,9 @@
-const DataFetching = () => {
-	return <div>Home Hello</div>
-}
 
-export default DataFetching
+	   const DataFetching = () => {
+			return (
+				<div className='w-full h-full p-4'>
+				</div>
+			)
+		}
+		export default DataFetching
+	
