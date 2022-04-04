@@ -55,7 +55,7 @@ const Navbar = () => {
 							key={'/demo/examples/' + pathId}
 							to={'/demo/examples/' + pathId}
 							className={clsx(
-								'px-2 py-2 font-medium rounded-md',
+								'px-2 py-2 rounded-md',
 								currentPathId === pathId && 'bg-slate-900 text-white'
 							)}
 						>
