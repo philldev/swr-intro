@@ -2,6 +2,24 @@ import clsx from 'clsx'
 import { Link, useLocation } from 'react-router-dom'
 
 const Navbar = () => {
+	const comparison = [
+		{
+			name: 'Sharing state',
+			pathId: 'global-state',
+		},
+		{
+			name: 'Race Condition',
+			pathId: 'race-condition',
+		},
+		{
+			name: 'Caching',
+			pathId: 'caching',
+		},
+		{
+			name: 'Performance',
+			pathId: 'performance',
+		},
+	]
 	const examples = [
 		{
 			name: 'Data Fetching',
@@ -45,11 +63,23 @@ const Navbar = () => {
 				</Link>
 			</div>
 			<div className='flex flex-col space-y-2'>
-				<Link to='/demo/examples' className='font-semibold'>
-					Comparison
-				</Link>
+				<span className='font-semibold'>Comparison</span>
+				<div className='flex flex-col my-2 text-sm'>
+					{comparison.map(({ name, pathId }) => (
+						<Link
+							key={'/demo/comparison/' + pathId}
+							to={'/demo/comparison/' + pathId}
+							className={clsx(
+								'px-2 py-2 rounded-md',
+								currentPathId === pathId && 'bg-slate-900 text-white'
+							)}
+						>
+							{name}
+						</Link>
+					))}
+				</div>
 				<span className='font-semibold'>Examples</span>
-				<div className='flex flex-col pl-2 my-2 text-sm'>
+				<div className='flex flex-col my-2 text-sm'>
 					{examples.map(({ name, pathId }) => (
 						<Link
 							key={'/demo/examples/' + pathId}

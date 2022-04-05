@@ -1,5 +1,5 @@
 import { Route, Routes } from 'react-router-dom'
-import CachingPage from './pages/Caching'
+import CachingPage from './pages/caching'
 import DataFetching from './pages/data-fetching'
 import ErrorHandling from './pages/error-handling'
 import Examples from './pages/examples'

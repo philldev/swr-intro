@@ -1,4 +1,4 @@
-import { usePokemons } from '../hooks/usePokemon'
+import { usePokemons } from '../hooks/usePokemons'
 
 const DataFetching = () => {
 	const { data } = usePokemons()
