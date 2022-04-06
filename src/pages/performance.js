@@ -153,13 +153,13 @@ const RerenderCompSWR = () => {
 			<div className='flex mb-4 space-x-2'>
 				<button
 					onClick={fetchData}
-					className='px-2 py-1 text-white rounded-md bg-slate-600'
+					className='px-2 py-1 text-sm font-bold text-white bg-blue-500 rounded hover:bg-blue-700'
 				>
 					Fetch!
 				</button>
 				<button
 					onClick={() => mutate('/pokemon/1', undefined, { revalidate: false })}
-					className='px-2 py-1 text-white rounded-md bg-slate-600'
+					className='px-2 py-1 text-sm font-bold text-white bg-blue-500 rounded hover:bg-blue-700'
 				>
 					Reset!
 				</button>
@@ -189,13 +189,13 @@ const RerenderComp = () => {
 			<div className='flex mb-4 space-x-2'>
 				<button
 					onClick={fetchData}
-					className='px-2 py-1 text-white rounded-md bg-slate-600'
+					className='px-2 py-1 text-sm font-bold text-white bg-blue-500 rounded hover:bg-blue-700'
 				>
 					Fetch!
 				</button>
 				<button
 					onClick={() => setData(null)}
-					className='px-2 py-1 text-white rounded-md bg-slate-600'
+					className='px-2 py-1 text-sm font-bold text-white bg-blue-500 rounded hover:bg-blue-700'
 				>
 					Reset!
 				</button>

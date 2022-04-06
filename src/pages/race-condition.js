@@ -50,13 +50,13 @@ const WithSWR = () => {
 	return (
 		<div className='flex p-4 space-x-4 bg-slate-50 w-max'>
 			<div>
+				<p className='mb-2'>fetching for id : {id}</p>
 				<button
-					className='px-2 py-1 mb-2 text-white rounded-md bg-slate-600'
+					className='px-2 py-1 text-sm font-bold text-white bg-blue-500 rounded hover:bg-blue-700'
 					onClick={() => setId(Math.round(Math.random() * 20) + 1)}
 				>
 					fetch!
 				</button>
-				<p>fetching for id : {id}</p>
 			</div>
 			<div className='flex space-x-3'>
 				<WithSWRA id={id} />
@@ -97,13 +97,13 @@ const BasicDataFetching = () => {
 	return (
 		<div className='flex p-4 space-x-4 bg-slate-50 w-max'>
 			<div>
+				<p className='mb-2'>fetching for id : {id}</p>
 				<button
-					className='px-2 py-1 mb-2 text-white rounded-md bg-slate-600'
+					className='px-2 py-1 text-sm font-bold text-white bg-blue-500 rounded hover:bg-blue-700'
 					onClick={() => setId(Math.round(Math.random() * 20) + 1)}
 				>
 					fetch!
 				</button>
-				<p>fetching for id : {id}</p>
 			</div>
 			<div className='flex space-x-3'>
 				<BasicDataFetchingA id={id} />

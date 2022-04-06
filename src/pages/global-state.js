@@ -49,7 +49,6 @@ const GlobalStatePage = () => {
 const WithSWR = () => {
 	return (
 		<div className='p-4 bg-slate-50'>
-			<div className='mb-4'>Parent Component</div>
 			<div className='flex space-x-3'>
 				<WithSWRA />
 				<WithSWRB />
