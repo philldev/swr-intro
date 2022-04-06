@@ -7,7 +7,7 @@ const Examples = () => {
 			<div className='w-[250px] fixed h-full bottom-0 left-0 top-0'>
 				<Navbar />
 			</div>
-			<div className='fixed left-[250px] h-full right-0 top-0 bottom-0'>
+			<div className='fixed left-[250px] h-full right-0 top-0 bottom-0 overflow-y-auto'>
 				<Outlet />
 			</div>
 		</div>

@@ -93,7 +93,7 @@ const BasicDataFetchingRequest = () => {
 }
 
 const PokemonSWR = () => {
-	const { data } = usePokemon(1)
+	const { data } = usePokemon(2)
 	const isLoading = data === undefined
 
 	if (isLoading) {
