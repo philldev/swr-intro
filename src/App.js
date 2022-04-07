@@ -9,8 +9,8 @@ import InfiniteScrolling from './pages/infinite-scrolling'
 import Mutation from './pages/mutation'
 import Pagination from './pages/pagination'
 import PerformancePage from './pages/performance'
+import Prefetching from './pages/prefetching'
 import RaceConditionPage from './pages/race-condition'
-import SuspenseDemo from './pages/suspense'
 
 function App() {
 	return (
@@ -33,7 +33,7 @@ function App() {
 					element={<InfiniteScrolling />}
 				/>
 				<Route path='examples/mutation' element={<Mutation />} />
-				<Route path='examples/prefetching' element={<SuspenseDemo />} />
+				<Route path='examples/prefetching' element={<Prefetching />} />
 			</Route>
 		</Routes>
 	)

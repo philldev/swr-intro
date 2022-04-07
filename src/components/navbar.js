@@ -45,10 +45,6 @@ const Navbar = () => {
 			name: 'Prefetching',
 			pathId: 'prefetching',
 		},
-		{
-			name: 'Suspense',
-			pathId: 'suspense',
-		},
 	]
 
 	const location = useLocation()
