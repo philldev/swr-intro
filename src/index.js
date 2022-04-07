@@ -12,11 +12,13 @@ root.render(
 	<React.StrictMode>
 		<BrowserRouter>
 			<SWRConfig
-			// value={{
-			// refreshInterval: undefined,
-			// fetcher: (resource, init) =>
-			// 	fetch(API_URL + resource, init).then((res) => res.json()),
-			// }}
+				value={
+					{
+						// refreshInterval: 1000,
+						// fetcher: (resource, init) =>
+						// 	fetch(API_URL + resource, init).then((res) => res.json()),
+					}
+				}
 			>
 				<App />
 			</SWRConfig>

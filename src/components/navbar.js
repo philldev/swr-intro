@@ -71,7 +71,7 @@ const Navbar = () => {
 							to={'/demo/comparison/' + pathId}
 							className={clsx(
 								'px-2 py-2 rounded-md',
-								currentPathId === pathId && 'bg-slate-900 text-white'
+								currentPathId === pathId && 'bg-slate-200'
 							)}
 						>
 							{name}
@@ -86,7 +86,7 @@ const Navbar = () => {
 							to={'/demo/examples/' + pathId}
 							className={clsx(
 								'px-2 py-2 rounded-md',
-								currentPathId === pathId && 'bg-slate-900 text-white'
+								currentPathId === pathId && 'bg-slate-200'
 							)}
 						>
 							{name}

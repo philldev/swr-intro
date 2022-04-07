@@ -3,7 +3,7 @@ import { usePokemonsInfinite } from '../hooks/usePokemons'
 
 const InfiniteScrolling = () => {
 	const limit = 9
-	const { data, mutate, setSize, size } = usePokemonsInfinite(limit)
+	const { data, setSize, size } = usePokemonsInfinite(limit)
 	const isLoading = data === undefined
 
 	const pokemons = data?.flat()

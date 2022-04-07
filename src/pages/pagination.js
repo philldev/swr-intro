@@ -10,7 +10,6 @@ const Pagination = () => {
 	})
 	const isLoading = data === undefined
 
-	console.log(data)
 	return (
 		<div className='w-full h-full p-4'>
 			<h1 className='mb-4 text-4xl font-bold'>Pagination</h1>
