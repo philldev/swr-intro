@@ -1,8 +1,10 @@
+import useSWR from 'swr'
 import { PokemonCard } from '../components/pokemon-card'
-import { usePokemons } from '../hooks/usePokemons'
+import { fetcher } from '../helpers/api'
 
 const DataFetching = () => {
-	const { data } = usePokemons({ query: '?limit=10' })
+	const query = '?limit=9'
+	const { data } = useSWR('/pokemon' + query, fetcher)
 	const isLoading = data === undefined
 
 	return (

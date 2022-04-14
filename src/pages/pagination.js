@@ -1,13 +1,15 @@
 import { useState } from 'react'
+import useSWR from 'swr'
 import { PokemonCard } from '../components/pokemon-card'
-import { usePokemons } from '../hooks/usePokemons'
+import { fetcher } from '../helpers/api'
 
 const Pagination = () => {
 	const SIZE = 9
 	const [page, setPage] = useState(0)
-	const { data } = usePokemons({
-		query: `?${page ? 'offset=' + SIZE * page : ''}&limit=${SIZE}`,
-	})
+
+	const query = `?limit=${SIZE}${page ? `&offset=${page * SIZE}` : ''}`
+
+	const { data } = useSWR('/pokemon' + query, fetcher)
 	const isLoading = data === undefined
 
 	return (
